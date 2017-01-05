@@ -6,3 +6,7 @@
 .wide-range {
   max-width: 100%;
 }
+
+.left {
+  text-align: left;
+}
