@@ -1,0 +1,667 @@
+Last login: Thu Jan  5 07:54:41 on console
+epicodus-8:~ Guest$ touch .pairs
+epicodus-8:~ Guest$ atom .
+epicodus-8:~ Guest$ cd desktop
+epicodus-8:desktop Guest$ mkdir week-in-review
+epicodus-8:desktop Guest$ cd week-in-review
+epicodus-8:week-in-review Guest$ touch index.html
+epicodus-8:week-in-review Guest$ ks
+-bash: ks: command not found
+epicodus-8:week-in-review Guest$ ls
+index.html
+epicodus-8:week-in-review Guest$ mkdir img
+epicodus-8:week-in-review Guest$ mkdir css
+epicodus-8:week-in-review Guest$ touch css/styles.css
+epicodus-8:week-in-review Guest$ ls
+css		img		index.html
+epicodus-8:week-in-review Guest$ cd css
+epicodus-8:css Guest$ ls
+styles.css
+epicodus-8:css Guest$ cd ..
+epicodus-8:week-in-review Guest$ git init
+Initialized empty Git repository in /Users/Guest/Desktop/week-in-review/.git/
+epicodus-8:week-in-review Guest$ git pair kg sk
+local:  user.name Keely Glenn and Sam Kirsch
+local:  user.initials kg sk
+epicodus-8:week-in-review Guest$ atom .
+epicodus-8:week-in-review Guest$ open index.html
+epicodus-8:week-in-review Guest$ git add .
+epicodus-8:week-in-review Guest$ git-pair-commit -m "Initialize the HTML file and add basic content"
+/usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:228:in `block in extract_author_details_from_config': undefined method `[]' for nil:NilClass (NoMethodError)
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:221:in `each'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:221:in `extract_author_details_from_config'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:62:in `commit'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:15:in `commit'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/bin/git-pair-commit:5:in `<top (required)>'
+	from /usr/local/bin/git-pair-commit:23:in `load'
+	from /usr/local/bin/git-pair-commit:23:in `<main>'
+epicodus-8:week-in-review Guest$ cd ..
+epicodus-8:desktop Guest$ ls
+week-in-review
+epicodus-8:desktop Guest$ mkdir vacation
+epicodus-8:desktop Guest$ cd vacation
+epicodus-8:vacation Guest$ ls
+epicodus-8:vacation Guest$ pwd
+/Users/Guest/desktop/vacation
+epicodus-8:vacation Guest$ mkdir css img
+epicodus-8:vacation Guest$ touch index.html css/styles.css
+epicodus-8:vacation Guest$ atom .
+epicodus-8:vacation Guest$ git init
+Initialized empty Git repository in /Users/Guest/Desktop/vacation/.git/
+epicodus-8:vacation Guest$ git pairs kg sk
+git: 'pairs' is not a git command. See 'git --help'.
+
+Did you mean this?
+	pair
+epicodus-8:vacation Guest$ git pair kg sk
+local:  user.name Keely Glenn and Sam Kirsch
+local:  user.initials kg sk
+epicodus-8:vacation Guest$ cd ..
+epicodus-8:desktop Guest$ ls
+vacation	week-in-review
+epicodus-8:desktop Guest$ cd week-in-review
+epicodus-8:week-in-review Guest$ git add remote sk https://github.com/denalisk/week-in-review
+fatal: pathspec 'remote' did not match any files
+epicodus-8:week-in-review Guest$ git remote add sk https://github.com/denalisk/week-in-review
+epicodus-8:week-in-review Guest$ git push sk master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/denalisk/week-in-review'
+epicodus-8:week-in-review Guest$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   css/styles.css
+	new file:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+epicodus-8:week-in-review Guest$ git-pair-commit -m "Add more bootstrap styling"
+/usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:228:in `block in extract_author_details_from_config': undefined method `[]' for nil:NilClass (NoMethodError)
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:221:in `each'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:221:in `extract_author_details_from_config'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:62:in `commit'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/lib/pivotal_git_scripts/git_pair.rb:15:in `commit'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/pivotal_git_scripts-1.4.0/bin/git-pair-commit:5:in `<top (required)>'
+	from /usr/local/bin/git-pair-commit:23:in `load'
+	from /usr/local/bin/git-pair-commit:23:in `<main>'
+epicodus-8:week-in-review Guest$ git branch
+epicodus-8:week-in-review Guest$ ls
+css		img		index.html
+epicodus-8:week-in-review Guest$ ls -a
+.		.git		img
+..		css		index.html
+epicodus-8:week-in-review Guest$ git about
+git user:       Keely Glenn and Sam Kirsch
+git email:      NONE
+GitHub project: NONE
+epicodus-8:week-in-review Guest$ git pair kg sk
+local:  user.name Keely Glenn and Sam Kirsch
+local:  user.email keely+sam@
+local:  user.initials kg sk
+epicodus-8:week-in-review Guest$ git-pair-commit -m "Add correct pairing"
+Committing under keely@
+[master (root-commit) 22c80cd] Add correct pairing
+ 2 files changed, 57 insertions(+)
+ create mode 100644 css/styles.css
+ create mode 100644 index.html
+epicodus-8:week-in-review Guest$ git push sk master
+Username for 'https://github.com': denalisk
+Password for 'https://denalisk@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 1.15 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/denalisk/week-in-review
+ * [new branch]      master -> master
+epicodus-8:week-in-review Guest$ git remote add kg https://github.com/keelyzglenn/week-in-review.git
+epicodus-8:week-in-review Guest$ git push kg master
+Username for 'https://github.com': keelyzglenn
+Password for 'https://keelyzglenn@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 1.15 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/keelyzglenn/week-in-review.git
+ * [new branch]      master -> master
+epicodus-8:week-in-review Guest$ cd desktop
+-bash: cd: desktop: No such file or directory
+epicodus-8:week-in-review Guest$ cd ..
+epicodus-8:desktop Guest$ cd vacation
+epicodus-8:vacation Guest$ git remote add kg https://github.com/keelyzglenn/Vacation-Site.git
+epicodus-8:vacation Guest$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	css/
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+epicodus-8:vacation Guest$ git add .
+epicodus-8:vacation Guest$ git-pair-commit -m "css and index.html created no bootstrap added"
+Committing under keely@
+[master (root-commit) 9b52c03] css and index.html created no bootstrap added
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 css/styles.css
+ create mode 100644 index.html
+epicodus-8:vacation Guest$ git push kg master
+Username for 'https://github.com': keelyzglenn
+Password for 'https://keelyzglenn@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 316 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/keelyzglenn/Vacation-Site.git
+ * [new branch]      master -> master
+epicodus-8:vacation Guest$ git remote add sk https://github.com/keelyzglenn/Vacation-Site
+epicodus-8:vacation Guest$ git push sk master
+Username for 'https://github.com': denalisk
+Password for 'https://denalisk@github.com': 
+remote: Permission to keelyzglenn/Vacation-Site.git denied to denalisk.
+fatal: unable to access 'https://github.com/keelyzglenn/Vacation-Site/': The requested URL returned error: 403
+epicodus-8:vacation Guest$ git remote -v
+kg	https://github.com/keelyzglenn/Vacation-Site.git (fetch)
+kg	https://github.com/keelyzglenn/Vacation-Site.git (push)
+sk	https://github.com/keelyzglenn/Vacation-Site (fetch)
+sk	https://github.com/keelyzglenn/Vacation-Site (push)
+epicodus-8:vacation Guest$ git push sk master
+Username for 'https://github.com': denalisk
+Password for 'https://denalisk@github.com': 
+remote: Permission to keelyzglenn/Vacation-Site.git denied to denalisk.
+fatal: unable to access 'https://github.com/keelyzglenn/Vacation-Site/': The requested URL returned error: 403
+epicodus-8:vacation Guest$ git remote -help
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+epicodus-8:vacation Guest$ git remote remove -sk
+fatal: No such remote: -sk
+epicodus-8:vacation Guest$ git remote remove sk
+epicodus-8:vacation Guest$ git remote add sk https://github.com/denalisk/vacation.git
+epicodus-8:vacation Guest$ git push sk master
+Username for 'https://github.com': denalisk
+Password for 'https://denalisk@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 316 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/denalisk/vacation.git
+ * [new branch]      master -> master
+epicodus-8:vacation Guest$ ls
+css		img		index.html
+epicodus-8:vacation Guest$ atom .
+epicodus-8:vacation Guest$ open index.html
+epicodus-8:vacation Guest$ cd img
+epicodus-8:img Guest$ ls
+flanmes.jpg
+epicodus-8:img Guest$ mv falnmes.jpg flames.jpg
+mv: rename falnmes.jpg to flames.jpg: No such file or directory
+epicodus-8:img Guest$ mv flanmes.jpg flames.jpg
+epicodus-8:img Guest$ cd ..
+epicodus-8:vacation Guest$ git add .
+epicodus-8:vacation Guest$ git-pair-commit -m "container and background img css"
+Committing under sam@
+[master a353a0b] container and background img css
+ 3 files changed, 32 insertions(+)
+ create mode 100644 img/flames.jpg
+epicodus-8:vacation Guest$ git status
+On branch master
+nothing to commit, working directory clean
+epicodus-8:vacation Guest$ git add .
+epicodus-8:vacation Guest$ git-pair-commit -m "add helper classes and blockquotes"
+Committing under sam@
+[master c794705] add helper classes and blockquotes
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+epicodus-8:vacation Guest$ git push kg master
+Username for 'https://github.com': keelyzglenn
+Password for 'https://keelyzglenn@github.com': 
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 231.77 KiB | 0 bytes/s, done.
+Total 10 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/keelyzglenn/Vacation-Site.git
+   9b52c03..c794705  master -> master
+epicodus-8:vacation Guest$ cd ..
+epicodus-8:desktop Guest$ cd week-in-review
+epicodus-8:week-in-review Guest$ open index.html
+epicodus-8:week-in-review Guest$ git add .
+epicodus-8:week-in-review Guest$ git-pair-commit -m "rows and columns"
+Committing under sam@
+[master 8460352] rows and columns
+ 1 file changed, 89 insertions(+), 57 deletions(-)
+ rewrite index.html (95%)
+epicodus-8:week-in-review Guest$ git push kg master
+Username for 'https://github.com': keelyzglenn
+Password for 'https://keelyzglenn@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 983 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/keelyzglenn/week-in-review.git
+   22c80cd..8460352  master -> master
+epicodus-8:week-in-review Guest$ git status
+On branch master
+nothing to commit, working directory clean
+epicodus-8:week-in-review Guest$ git add .
+epicodus-8:week-in-review Guest$ git-pair-commit -m "Add activities content and format in rows and columns"
+Committing under keely@
+On branch master
+nothing to commit, working directory clean
+epicodus-8:week-in-review Guest$ git status
+On branch master
+nothing to commit, working directory clean
+epicodus-8:week-in-review Guest$ ls
+css		img		index.html
+epicodus-8:week-in-review Guest$ cd ..
+epicodus-8:desktop Guest$ cd vacation
+epicodus-8:vacation Guest$ git add .
+epicodus-8:vacation Guest$ git-pair-commit -m "Add activities content and format in rows and columns"
+Committing under keely@
+[master dd4afb0] Add activities content and format in rows and columns
+ 1 file changed, 32 insertions(+)
+epicodus-8:vacation Guest$ touch new.html
+epicodus-8:vacation Guest$ atom new.html
+epicodus-8:vacation Guest$ touch css/styles1.css
+epicodus-8:vacation Guest$ atom css/styles1.css
+epicodus-8:vacation Guest$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   css/styles.css
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	css/styles1.css
+	new.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+epicodus-8:vacation Guest$ git checkout --css/styles.css
+error: unknown option `css/styles.css'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach the HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --progress            force progress reporting
+
+epicodus-8:vacation Guest$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   css/styles.css
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	css/styles1.css
+	new.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+epicodus-8:vacation Guest$ pwd
+/Users/Guest/desktop/vacation
+epicodus-8:vacation Guest$ git help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+epicodus-8:vacation Guest$ git checkout css/styles.css
+epicodus-8:vacation Guest$ git checkout vacation.html
+error: pathspec 'vacation.html' did not match any file(s) known to git.
+epicodus-8:vacation Guest$ git checkout index.html
+epicodus-8:vacation Guest$ clear
+
+epicodus-8:vacation Guest$ git -help
+Unknown option: -help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+epicodus-8:vacation Guest$ git remote -v
+kg	https://github.com/keelyzglenn/Vacation-Site.git (fetch)
+kg	https://github.com/keelyzglenn/Vacation-Site.git (push)
+sk	https://github.com/denalisk/vacation.git (fetch)
+sk	https://github.com/denalisk/vacation.git (push)
+epicodus-8:vacation Guest$ pwd
+/Users/Guest/desktop/vacation
+epicodus-8:vacation Guest$ cd ..
+epicodus-8:desktop Guest$ 
+epicodus-8:desktop Guest$ cd ..
+epicodus-8:~ Guest$ pwd
+/Users/Guest
+epicodus-8:~ Guest$ git config user.name "fredoliva42"
+fatal: not in a git directory
+epicodus-8:~ Guest$ cd desktop
+epicodus-8:desktop Guest$ mkdir wiki
+epicodus-8:desktop Guest$ cd wiki
+epicodus-8:wiki Guest$ pwd
+/Users/Guest/desktop/wiki
+epicodus-8:wiki Guest$ touch index.html
+epicodus-8:wiki Guest$ mkdir css
+epicodus-8:wiki Guest$ cd css
+epicodus-8:css Guest$ touch styles.css
+epicodus-8:css Guest$ pwd
+/Users/Guest/desktop/wiki/css
+epicodus-8:css Guest$ ls
+styles.css
+epicodus-8:css Guest$ cd .
+epicodus-8:css Guest$ cd ..
+epicodus-8:wiki Guest$ mkdir img
+epicodus-8:wiki Guest$ pwd
+/Users/Guest/desktop/wiki
+epicodus-8:wiki Guest$ ls
+css		img		index.html
+epicodus-8:wiki Guest$ git init
+Initialized empty Git repository in /Users/Guest/Desktop/wiki/.git/
+epicodus-8:wiki Guest$ ls
+css		img		index.html
+epicodus-8:wiki Guest$ ls -a
+.		.git		img
+..		css		index.html
+epicodus-8:wiki Guest$ cd .git
+epicodus-8:.git Guest$ ls
+HEAD		description	info		refs
+config		hooks		objects
+epicodus-8:.git Guest$ cd ..
+epicodus-8:wiki Guest$ ls -help
+total 0
+drwxr-xr-x  3 Guest  _guest   102B Jan  5 13:26 css/
+drwxr-xr-x  2 Guest  _guest    68B Jan  5 13:26 img/
+-rw-r--r--  1 Guest  _guest     0B Jan  5 13:25 index.html
+epicodus-8:wiki Guest$ pwd
+/Users/Guest/desktop/wiki
+epicodus-8:wiki Guest$ git config user.name "fredoliva42"
+epicodus-8:wiki Guest$ git config user.email fredoliva42@gmail.com
+epicodus-8:wiki Guest$ git about
+git user:       fredoliva42
+git email:      fredoliva42@gmail.com
+GitHub project: NONE
+epicodus-8:wiki Guest$ git remote add fo https://github.com/fredoliva42/wikipedia.git
+epicodus-8:wiki Guest$ git remote -v
+fo	https://github.com/fredoliva42/wikipedia.git (fetch)
+fo	https://github.com/fredoliva42/wikipedia.git (push)
+epicodus-8:wiki Guest$ pwd
+/Users/Guest/desktop/wiki
+epicodus-8:wiki Guest$ atom .
+epicodus-8:wiki Guest$ atom css/styles.css
+epicodus-8:wiki Guest$ git add .
+epicodus-8:wiki Guest$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   css/styles.css
+	new file:   index.html
+
+epicodus-8:wiki Guest$ git commit -m "html basic link css and link bootstrap"
+[master (root-commit) d391ed8] html basic link css and link bootstrap
+ 2 files changed, 11 insertions(+)
+ create mode 100644 css/styles.css
+ create mode 100644 index.html
+epicodus-8:wiki Guest$ git remote -v
+fo	https://github.com/fredoliva42/wikipedia.git (fetch)
+fo	https://github.com/fredoliva42/wikipedia.git (push)
+epicodus-8:wiki Guest$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+epicodus-8:wiki Guest$ git commit
+On branch master
+Changes not staged for commit:
+	modified:   index.html
+
+no changes added to commit
+epicodus-8:wiki Guest$ git commit -a
+[master 92ed830] A demo commit
+ 1 file changed, 3 insertions(+)
+epicodus-8:wiki Guest$ git log
+commit 92ed8309dc6b089e46a5057e1efa9c374a534a3a
+Author: fredoliva42 <fredoliva42@gmail.com>
+Date:   Thu Jan 5 13:58:20 2017 -0800
+
+    A demo commit
+
+commit d391ed8544d819e95a4fbe340dba80631a76a790
+Author: fredoliva42 <fredoliva42@gmail.com>
+Date:   Thu Jan 5 13:53:23 2017 -0800
+
+    html basic link css and link bootstrap
+epicodus-8:wiki Guest$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+epicodus-8:wiki Guest$ git checkout index.html
+epicodus-8:wiki Guest$ git status
+On branch master
+nothing to commit, working directory clean
+epicodus-8:wiki Guest$ git push fo master
+Username for 'https://github.com': fredoliva42
+Password for 'https://fredoliva42@github.com': 
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 822 bytes | 0 bytes/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/fredoliva42/wikipedia.git
+ * [new branch]      master -> master
+epicodus-8:wiki Guest$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+epicodus-8:wiki Guest$ git add index.html
+epicodus-8:wiki Guest$ git commit -m "add rows and columns"
+[master a37ddbb] add rows and columns
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+epicodus-8:wiki Guest$ git log
+commit a37ddbb572ec8c0ebc1e7319588dd15253e0f997
+Author: fredoliva42 <fredoliva42@gmail.com>
+Date:   Thu Jan 5 14:24:54 2017 -0800
+
+    add rows and columns
+
+commit 92ed8309dc6b089e46a5057e1efa9c374a534a3a
+Author: fredoliva42 <fredoliva42@gmail.com>
+Date:   Thu Jan 5 13:58:20 2017 -0800
+
+    A demo commit
+
+commit d391ed8544d819e95a4fbe340dba80631a76a790
+Author: fredoliva42 <fredoliva42@gmail.com>
+Date:   Thu Jan 5 13:53:23 2017 -0800
+
+    html basic link css and link bootstrap
+epicodus-8:wiki Guest$ open index.html
+epicodus-8:wiki Guest$ git add .
+epicodus-8:wiki Guest$ git commit
+Aborting commit due to empty commit message.
+epicodus-8:wiki Guest$ git commit -m "add icon and more divs"
+[master eb7975a] add icon and more divs
+ 3 files changed, 17 insertions(+), 3 deletions(-)
+ create mode 100644 img/icon.jpeg
+epicodus-8:wiki Guest$ git remote add kg https://github.com/keelyzglenn/wikipage.git
+epicodus-8:wiki Guest$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+epicodus-8:wiki Guest$ git push kg master
+Username for 'https://github.com': keelyzglenn
+Password for 'https://keelyzglenn@github.com': 
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (18/18), 9.82 KiB | 0 bytes/s, done.
+Total 18 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/keelyzglenn/wikipage.git
+ * [new branch]      master -> master
+epicodus-8:wiki Guest$ git branch
+* master
+epicodus-8:wiki Guest$ git branch keely-branch
+epicodus-8:wiki Guest$ git checkout keely-branch
+Switched to branch 'keely-branch'
+epicodus-8:wiki Guest$ git push kg keely-branch
+Username for 'https://github.com': keelyzglenn
+Password for 'https://keelyzglenn@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/keelyzglenn/wikipage.git
+ * [new branch]      keely-branch -> keely-branch
+epicodus-8:wiki Guest$ git add .
+epicodus-8:wiki Guest$ git commit -m "col 2 rows 1-3
+> 
+> git commit -m "col 2 rows 1-3"
+> 
+epicodus-8:wiki Guest$ git commit -m "col 2 rows 1-3"
+[keely-branch c3c0ba2] col 2 rows 1-3
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+epicodus-8:wiki Guest$ git status
+On branch keely-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   css/styles.css
+	modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+epicodus-8:wiki Guest$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+	index.html
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+epicodus-8:wiki Guest$ git add .
+epicodus-8:wiki Guest$ git commit -m "add links list"
+[keely-branch 04cdb27] add links list
+ 2 files changed, 95 insertions(+), 1 deletion(-)
+epicodus-8:wiki Guest$ git branch
+* keely-branch
+  master
+epicodus-8:wiki Guest$ git checkout master
+Switched to branch 'master'
+epicodus-8:wiki Guest$ git branch
+  keely-branch
+* master
+epicodus-8:wiki Guest$ git merge keely-branch -m "merge with keely-branch"
+Updating eb7975a..04cdb27
+Fast-forward (no commit created; -m option ignored)
+ css/styles.css |   4 +++
+ index.html     | 102 +++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 104 insertions(+), 2 deletions(-)
+epicodus-8:wiki Guest$ 
