@@ -5,6 +5,7 @@
 
 .wide-range {
   max-width: 100%;
+  padding: 10px;
 }
 
 .left {
@@ -15,3 +16,18 @@
   display: inline-block;
   width: 60px;
 }
+
+.centered {
+  text-align: center;
+}
+ p.sidebar-titles {
+  margin-left: -10px;
+  padding-top: 7px;
+  border-top: 1px solid black;
+  margin-top: 7px;
+ }
+
+ ul.indent-list li {
+   margin-left: 10px;
+   list-style: none;
+ }
