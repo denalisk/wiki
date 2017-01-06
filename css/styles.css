@@ -10,3 +10,8 @@
 .left {
   text-align: left;
 }
+
+.inline-list {
+  display: inline-block;
+  width: 60px;
+}
